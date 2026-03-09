@@ -225,14 +225,12 @@ body[data-theme="dark"] .hero {
     color: var(--secondary-color);
 }
 
-/* 3D Zig-Zag Effect for Hero Section with Neural Network Background */
 .hero {
     position: relative;
     overflow: hidden;
     z-index: 1;
 }
 
-/* Create the zigzag background elements */
 .hero:before, .hero:after {
     content: '';
     position: absolute;
@@ -258,7 +256,6 @@ body[data-theme="dark"] .hero {
     animation: floatZigZag2 12s ease-in-out infinite;
 }
 
-/* 3D Name Container with Perspective */
 .hero-content-wrapper {
     perspective: 1000px;
     transform-style: preserve-3d;
@@ -278,7 +275,6 @@ body[data-theme="dark"] .hero {
     transform: translateZ(30px);
 }
 
-/* 3D Floating Effect for Name */
 .hero h1 {
     position: relative;
     transform-style: preserve-3d;
@@ -298,7 +294,6 @@ body[data-theme="dark"] .hero {
     opacity: 0.7;
 }
 
-/* 3D Button Effect */
 .hero .btn {
     transform-style: preserve-3d;
     position: relative;
@@ -330,7 +325,6 @@ body[data-theme="dark"] .hero {
     filter: blur(15px);
 }
 
-/* Neural Network Background */
 .neural-network {
     position: absolute;
     top: 0;
@@ -342,7 +336,6 @@ body[data-theme="dark"] .hero {
     transform-style: preserve-3d;
 }
 
-/* Neural Nodes */
 .node {
     position: absolute;
     width: 8px;
@@ -352,7 +345,6 @@ body[data-theme="dark"] .hero {
     transform: translateZ(0);
 }
 
-/* Create 15 different nodes scattered across the background */
 .node:nth-child(1) { top: 15%; left: 10%; animation: pulseNode 4s infinite, floatNode 9s infinite; }
 .node:nth-child(2) { top: 25%; left: 35%; animation: pulseNode 6s infinite, floatNode 11s infinite 0.4s; }
 .node:nth-child(3) { top: 10%; left: 60%; animation: pulseNode 5s infinite, floatNode 10s infinite 0.8s; }
@@ -369,7 +361,6 @@ body[data-theme="dark"] .hero {
 .node:nth-child(14) { top: 5%; left: 75%; animation: pulseNode 6.6s infinite, floatNode 11.6s infinite 5.2s; }
 .node:nth-child(15) { top: 60%; left: 90%; animation: pulseNode 5.6s infinite, floatNode 10.6s infinite 5.6s; }
 
-/* Neural Connections (Lines) */
 .connection {
     position: absolute;
     height: 1px;
@@ -379,7 +370,6 @@ body[data-theme="dark"] .hero {
     z-index: -1;
 }
 
-/* Create connections between random nodes */
 .connection:nth-child(1) { top: 15%; left: 10%; width: 25%; transform: rotate(20deg); animation: pulseConnection 8s infinite; }
 .connection:nth-child(2) { top: 25%; left: 35%; width: 25%; transform: rotate(-15deg); animation: pulseConnection 9s infinite 0.5s; }
 .connection:nth-child(3) { top: 10%; left: 60%; width: 20%; transform: rotate(30deg); animation: pulseConnection 7s infinite 1s; }
@@ -396,7 +386,6 @@ body[data-theme="dark"] .hero {
 .connection:nth-child(14) { top: 30%; left: 55%; width: 35%; transform: rotate(18deg); animation: pulseConnection 9.7s infinite 6.5s; }
 .connection:nth-child(15) { top: 70%; left: 65%; width: 25%; transform: rotate(-18deg); animation: pulseConnection 7.7s infinite 7s; }
 
-/* Diagonal Connections for more complexity */
 .diagonal-connection {
     position: absolute;
     height: 1px;
@@ -415,7 +404,6 @@ body[data-theme="dark"] .hero {
 .diagonal-connection:nth-child(7) { top: 15%; left: 75%; width: 20%; transform: rotate(40deg); animation: pulseConnection 11.2s infinite 4.2s; }
 .diagonal-connection:nth-child(8) { top: 25%; left: 5%; width: 70%; transform: rotate(-40deg); animation: pulseConnection 10.2s infinite 4.9s; }
 
-/* Zig-Zag Decorative Elements */
 .zigzag-decorator {
     position: absolute;
     height: 100%;
@@ -458,7 +446,6 @@ body[data-theme="dark"] .hero {
     animation: zigFloat3 15s ease-in-out infinite;
 }
 
-/* Data Flow Effect */
 .data-flow {
     position: absolute;
     width: 10px;
@@ -469,31 +456,11 @@ body[data-theme="dark"] .hero {
     z-index: -1;
 }
 
-.data-flow:nth-child(1) {
-    top: 25%; 
-    left: 15%;
-    animation: dataFlow 8s linear infinite;
-}
+.data-flow:nth-child(1) { top: 25%; left: 15%; animation: dataFlow 8s linear infinite; }
+.data-flow:nth-child(2) { top: 45%; left: 35%; animation: dataFlow 8s linear infinite 2s; }
+.data-flow:nth-child(3) { top: 65%; left: 55%; animation: dataFlow 8s linear infinite 4s; }
+.data-flow:nth-child(4) { top: 35%; left: 75%; animation: dataFlow 8s linear infinite 6s; }
 
-.data-flow:nth-child(2) {
-    top: 45%; 
-    left: 35%;
-    animation: dataFlow 8s linear infinite 2s;
-}
-
-.data-flow:nth-child(3) {
-    top: 65%; 
-    left: 55%;
-    animation: dataFlow 8s linear infinite 4s;
-}
-
-.data-flow:nth-child(4) {
-    top: 35%; 
-    left: 75%;
-    animation: dataFlow 8s linear infinite 6s;
-}
-
-/* Animations */
 @keyframes floatZigZag1 {
     0%, 100% { transform: rotate(-3deg) skewX(-15deg) translateZ(10px); }
     50% { transform: rotate(-2deg) skewX(-12deg) translateZ(20px) translateY(-10px); }
@@ -524,7 +491,6 @@ body[data-theme="dark"] .hero {
     50% { transform: rotate(-2deg) skewX(-5deg) translateY(-15px); }
 }
 
-/* Neural Network Animations */
 @keyframes pulseNode {
     0%, 100% { transform: scale(1) translateZ(0); opacity: 0.5; }
     50% { transform: scale(1.5) translateZ(15px); opacity: 0.8; }
@@ -721,7 +687,7 @@ body[data-theme="dark"] .experience {
     top: 0;
 }
 
-/* Project Section Styles with 3D Video-like Effects */
+/* Project Section Styles */
 .projects {
     padding: var(--section-padding);
     perspective: 1000px;
@@ -733,7 +699,6 @@ body[data-theme="dark"] .experience {
     gap: 30px;
 }
 
-/* Enhanced 3D Video-like Project Card */
 .project-card {
     height: 400px;
     perspective: 2000px;
@@ -751,12 +716,10 @@ body[data-theme="dark"] .experience {
     border-radius: var(--border-radius);
 }
 
-/* Enhanced 3D hover effect */
 .project-card:hover .project-card-inner {
     transform: rotateY(180deg) translateZ(20px);
 }
 
-/* Add depth to the card while hovering */
 .project-card:hover {
     z-index: 10;
 }
@@ -789,7 +752,6 @@ body[data-theme="dark"] .experience {
     z-index: 0;
 }
 
-/* 3D Video Effect for Project Images */
 .project-img {
     height: 180px;
     overflow: hidden;
@@ -803,13 +765,7 @@ body[data-theme="dark"] .experience {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0.05) 0%,
-        rgba(0, 0, 0, 0) 40%,
-        rgba(0, 0, 0, 0) 60%,
-        rgba(0, 0, 0, 0.05) 100%
-    );
+    background: linear-gradient(to bottom, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0) 40%, rgba(0,0,0,0) 60%, rgba(0,0,0,0.05) 100%);
     pointer-events: none;
 }
 
@@ -820,12 +776,10 @@ body[data-theme="dark"] .experience {
     transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-/* Simulating video playback effect on hover */
 .project-card:hover .project-img img {
     transform: scale(1.1) translateZ(20px);
 }
 
-/* Creating reflection for video-like effect */
 .project-img:before {
     content: '';
     position: absolute;
@@ -833,11 +787,7 @@ body[data-theme="dark"] .experience {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-        135deg,
-        rgba(255, 255, 255, 0.1) 0%,
-        rgba(255, 255, 255, 0) 50%
-    );
+    background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 50%);
     z-index: 2;
 }
 
@@ -854,12 +804,7 @@ body[data-theme="dark"] .experience {
     left: 0;
     width: 100%;
     height: 1px;
-    background: linear-gradient(
-        to right,
-        transparent 0%,
-        rgba(74, 108, 247, 0.3) 50%,
-        transparent 100%
-    );
+    background: linear-gradient(to right, transparent 0%, rgba(74,108,247,0.3) 50%, transparent 100%);
 }
 
 .project-info h3 {
@@ -890,7 +835,6 @@ body[data-theme="dark"] .experience {
     transition: var(--transition);
 }
 
-/* 3D Play Button Effect */
 .project-card-back .tech-tag {
     background-color: white;
     color: var(--primary-color);
@@ -915,26 +859,15 @@ body[data-theme="dark"] .experience {
     top: 0;
     width: 30px;
     height: 100%;
-    background: linear-gradient(
-        to right,
-        rgba(255, 255, 255, 0) 0%,
-        rgba(255, 255, 255, 0.8) 50%,
-        rgba(255, 255, 255, 0) 100%
-    );
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%);
     transform: skewX(-30deg);
     animation: shine 3s infinite;
 }
 
 @keyframes shine {
-    0% {
-        left: -30px;
-    }
-    20% {
-        left: 130%;
-    }
-    100% {
-        left: 130%;
-    }
+    0% { left: -30px; }
+    20% { left: 130%; }
+    100% { left: 130%; }
 }
 
 .project-card-back h3 {
@@ -946,7 +879,6 @@ body[data-theme="dark"] .experience {
     margin-bottom: 15px;
 }
 
-/* 3D Video Controls Simulation */
 .project-card-front:after {
     content: '';
     position: absolute;
@@ -965,7 +897,6 @@ body[data-theme="dark"] .experience {
     opacity: 1;
 }
 
-/* Progress Bar Animation */
 .project-card-front:before {
     content: '';
     position: absolute;
@@ -986,7 +917,6 @@ body[data-theme="dark"] .experience {
     opacity: 1;
 }
 
-/* Video Play Indicator */
 .project-card .play-indicator {
     position: absolute;
     top: 90px;
@@ -1112,6 +1042,67 @@ body[data-theme="dark"] .education {
     color: var(--secondary-color);
     font-size: 0.9rem;
 }
+
+/* ===================== RESUME SECTION ===================== */
+.resume-section {
+    padding: var(--section-padding);
+    background-color: var(--light-color);
+}
+
+body[data-theme="dark"] .resume-section {
+    background-color: #191919;
+}
+
+.resume-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.resume-actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    cursor: pointer;
+    font-family: var(--font-primary);
+    padding: 12px 30px;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: var(--transition);
+}
+
+.btn-outline:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.resume-viewer-wrap {
+    display: none;
+    margin-top: 30px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+.resume-viewer-wrap iframe {
+    display: block;
+    width: 100%;
+    height: 800px;
+    border: none;
+}
+/* ========================================================== */
 
 /* Contact Section Styles */
 .contact {
@@ -1275,96 +1266,41 @@ body[data-theme="dark"] .footer {
 
 /* Responsive Styles */
 @media screen and (max-width: 768px) {
-    .navbar .container {
-        flex-direction: column;
-        gap: 15px;
-    }
-    
-    .nav-links {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    
-    .hero {
-        padding: 120px 0 80px;
-    }
-    
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-    
-    .hero p {
-        font-size: 1.2rem;
-    }
-    
-    .about-content {
-        flex-direction: column;
-    }
-    
-    .section-title {
-        font-size: 2rem;
-    }
-    
-    .timeline:before {
-        left: 15px;
-    }
-    
-    .timeline-item {
-        padding-left: 45px;
-    }
-    
-    .timeline-item:before {
-        width: 15px;
-        height: 15px;
-        left: 9px;
-    }
-    
-    .project-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .education-cards, .cert-grid, .contact-info {
-        grid-template-columns: 1fr;
-    }
+    .navbar .container { flex-direction: column; gap: 15px; }
+    .nav-links { justify-content: center; flex-wrap: wrap; }
+    .hero { padding: 120px 0 80px; }
+    .hero h1 { font-size: 2.5rem; }
+    .hero p { font-size: 1.2rem; }
+    .about-content { flex-direction: column; }
+    .section-title { font-size: 2rem; }
+    .timeline:before { left: 15px; }
+    .timeline-item { padding-left: 45px; }
+    .timeline-item:before { width: 15px; height: 15px; left: 9px; }
+    .project-grid { grid-template-columns: 1fr; }
+    .education-cards, .cert-grid, .contact-info { grid-template-columns: 1fr; }
+    .resume-viewer-wrap iframe { height: 500px; }
+    .resume-actions { flex-direction: column; align-items: center; }
 }
 
-/* Animations and Transitions */
 @keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 .fade-in-up {
     animation: fadeInUp 0.6s ease forwards;
 }
 
-/* Video play animation */
 @keyframes pulse {
-    0% {
-        transform: scale(1);
-        opacity: 1;
-    }
-    50% {
-        transform: scale(1.1);
-        opacity: 0.8;
-    }
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.8; }
+    100% { transform: scale(1); opacity: 1; }
 }
 
 .project-card:hover .play-indicator {
     animation: pulse 1.5s infinite;
 }
 
-/* For scroll animations - will be applied via JS */
 .animate-on-scroll {
     opacity: 0;
     transform: translateY(20px);
@@ -1376,44 +1312,18 @@ body[data-theme="dark"] .footer {
     transform: translateY(0);
 }
 
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-    width: 10px;
-}
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--body-bg); }
+::-webkit-scrollbar-thumb { background: var(--primary-color); border-radius: 5px; }
+::-webkit-scrollbar-thumb:hover { background: var(--primary-dark); }
 
-::-webkit-scrollbar-track {
-    background: var(--body-bg);
-}
-
-::-webkit-scrollbar-thumb {
-    background: var(--primary-color);
-    border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: var(--primary-dark);
-}
-
-/* Added smooth transition to body changes */
 body, * {
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* 3D Transform Styles for additional depth */
-.project-card {
-    transform-style: preserve-3d;
-}
-
-.project-card-inner {
-    transform-style: preserve-3d;
-}
-
-/* 3D Shadow Effect for project cards */
-.project-card:hover {
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
-}
-
-/* Adding JS to enable the 3D video-like hover effects */
+.project-card { transform-style: preserve-3d; }
+.project-card-inner { transform-style: preserve-3d; }
+.project-card:hover { box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2); }
     </style>
 </head>
 <body>
@@ -1429,6 +1339,7 @@ body, * {
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><a href="#resume">Resume</a></li>
             </ul>
             <button class="theme-toggle" id="themeToggle">
                 <i class="fas fa-moon"></i>
@@ -1438,64 +1349,28 @@ body, * {
 
     <!-- Hero Section -->
     <section class="hero"><div class="neural-network">
-        <!-- Nodes -->
-        <div class="node"></div>
-        <div class="node"></div>
-        <div class="node"></div>
-        <div class="node"></div>
-        <div class="node"></div>
-        <div class="node"></div>
-        <div class="node"></div>
-        <div class="node"></div>
-        <div class="node"></div>
-        <div class="node"></div>
-        <div class="node"></div>
-        <div class="node"></div>
-        <div class="node"></div>
-        <div class="node"></div>
-        <div class="node"></div>
-        
-        <!-- Connections -->
-        <div class="connection"></div>
-        <div class="connection"></div>
-        <div class="connection"></div>
-        <div class="connection"></div>
-        <div class="connection"></div>
-        <div class="connection"></div>
-        <div class="connection"></div>
-        <div class="connection"></div>
-        <div class="connection"></div>
-        <div class="connection"></div>
-        <div class="connection"></div>
-        <div class="connection"></div>
-        <div class="connection"></div>
-        <div class="connection"></div>
-        <div class="connection"></div>
-        
-        <!-- Diagonal Connections -->
-        <div class="diagonal-connection"></div>
-        <div class="diagonal-connection"></div>
-        <div class="diagonal-connection"></div>
-        <div class="diagonal-connection"></div>
-        <div class="diagonal-connection"></div>
-        <div class="diagonal-connection"></div>
-        <div class="diagonal-connection"></div>
-        <div class="diagonal-connection"></div>
-        
-        <!-- Data Flow Elements -->
-        <div class="data-flow"></div>
-        <div class="data-flow"></div>
-        <div class="data-flow"></div>
-        <div class="data-flow"></div>
+        <div class="node"></div><div class="node"></div><div class="node"></div>
+        <div class="node"></div><div class="node"></div><div class="node"></div>
+        <div class="node"></div><div class="node"></div><div class="node"></div>
+        <div class="node"></div><div class="node"></div><div class="node"></div>
+        <div class="node"></div><div class="node"></div><div class="node"></div>
+        <div class="connection"></div><div class="connection"></div><div class="connection"></div>
+        <div class="connection"></div><div class="connection"></div><div class="connection"></div>
+        <div class="connection"></div><div class="connection"></div><div class="connection"></div>
+        <div class="connection"></div><div class="connection"></div><div class="connection"></div>
+        <div class="connection"></div><div class="connection"></div><div class="connection"></div>
+        <div class="diagonal-connection"></div><div class="diagonal-connection"></div>
+        <div class="diagonal-connection"></div><div class="diagonal-connection"></div>
+        <div class="diagonal-connection"></div><div class="diagonal-connection"></div>
+        <div class="diagonal-connection"></div><div class="diagonal-connection"></div>
+        <div class="data-flow"></div><div class="data-flow"></div>
+        <div class="data-flow"></div><div class="data-flow"></div>
     </div>
-
-        <!-- Add zigzag decorative elements -->
         <div class="zigzag-decorator">
             <div class="zigzag-line zigzag-1"></div>
             <div class="zigzag-line zigzag-2"></div>
             <div class="zigzag-line zigzag-3"></div>
         </div>
-        
         <div class="container">
             <div class="hero-content-wrapper">
                 <div class="hero-content">
@@ -1519,7 +1394,6 @@ body, * {
                     <p>I am a Computer Science graduate specializing in Artificial Intelligence and Machine Learning, with a strong academic background and a CGPA of 9.62. Throughout my academic journey, I have honed my skills in various domains including Machine Learning, Deep Learning, and Web Development.</p>
                     <p>Currently working as a Project Intern at Brainmage.ai, I focus on Web Scraping and Data Generation for AI models, including Telugu Large Language Models.</p>
                     <p>My experience includes working on object recognition systems, anti-spoofing detection, PPE detection, and full-stack web applications.</p>
-                    
                     <div class="skills">
                         <h3>Technical Skills</h3>
                         <div class="skill-tags">
@@ -1538,7 +1412,6 @@ body, * {
                             <span class="skill-tag">Github</span>
                             <span class="skill-tag">Kubernetes(Basics)</span>
                             <span class="skill-tag">CI/CD</span>
-                            
                         </div>
                     </div>
                 </div>
@@ -1557,10 +1430,8 @@ body, * {
                         <p class="timeline-date">May 2025 - June 2025</p>
                         <p class="timeline-location">National Institute of Technology ,Dakshina Kannada, Karnataka</p>
                         <ul>
-                            <li>Researched and applied game-theoretic models to study resource allocation in Mobile Edge Computing systems,
-gaining hands-on understanding of how real-world systems behave under congestion and load.</li>
-                            <li>Analyzed performance limitations and failure conditions, documenting practical insights that contributed to more
-robust system design.</li>
+                            <li>Researched and applied game-theoretic models to study resource allocation in Mobile Edge Computing systems, gaining hands-on understanding of how real-world systems behave under congestion and load.</li>
+                            <li>Analyzed performance limitations and failure conditions, documenting practical insights that contributed to more robust system design.</li>
                         </ul>
                     </div>
                 </div>
@@ -1570,10 +1441,8 @@ robust system design.</li>
                         <p class="timeline-date">December 2024 - March 2025</p>
                         <p class="timeline-location">Brainmage.ai, Visakhapatnam, Andhra Pradesh</p>
                         <ul>
-                            <li>Designed and maintained automated data pipelines through web scraping and preprocessing, ensuring high-quality
-datasets for model training and evaluation.</li>
-                            <li>Built and rigorously tested an AI-based text classification system, improving model reliability by validating
-predictions across diverse and challenging edge cases.</li>
+                            <li>Designed and maintained automated data pipelines through web scraping and preprocessing, ensuring high-quality datasets for model training and evaluation.</li>
+                            <li>Built and rigorously tested an AI-based text classification system, improving model reliability by validating predictions across diverse and challenging edge cases.</li>
                         </ul>
                     </div>
                 </div>
@@ -1583,8 +1452,7 @@ predictions across diverse and challenging edge cases.</li>
                         <p class="timeline-date">October 2024 - December 2024</p>
                         <p class="timeline-location">Infosys Springboard, Remote</p>
                         <ul>
-                            <li>Developed an end-to-end object recognition system using YOLO, validating detection accuracy and stability across
-multiple real-world scenarios.</li>
+                            <li>Developed an end-to-end object recognition system using YOLO, validating detection accuracy and stability across multiple real-world scenarios.</li>
                             <li>Designed for Versatile Applications, allowing customization for fields like security surveillance and manufacturing industries</li>
                         </ul>
                     </div>
@@ -1612,30 +1480,24 @@ multiple real-world scenarios.</li>
                 <div class="project-card">
                     <div class="project-card-inner">
                         <div class="project-card-front">
-                            <div class="project-img">
-                                <img src="agro.png" alt="AGRO">
-                            </div>
+                            <div class="project-img"><img src="agro.png" alt="AGRO"></div>
                             <div class="project-info">
                                 <h3>Krishi.AI</h3>
                                 <p class="project-date">November 2025</p>
-                                <p>Developed a smart decision-support system that analyzes soil conditions, weather data, and land parameters to
-generate accurate crop yield predictions.And provide recommendations by applying market trend analysis. </p>
+                                <p>Developed a smart decision-support system that analyzes soil conditions, weather data, and land parameters to generate accurate crop yield predictions and market trend recommendations.</p>
                                 <div class="project-tech">
-                                    <span class="tech-tag">Python</span>
-                                    <span class="tech-tag">Flask</span>
-                                    <span class="tech-tag">Scikit-Learn</span>
-                                    <span class="tech-tag">Open Meteo API</span>
-                                    <span class="tech-tag">Soil Grids API</span>
-                                    <span class="tech-tag">LLM(Open AI)</span>
+                                    <span class="tech-tag">Python</span><span class="tech-tag">Flask</span>
+                                    <span class="tech-tag">Scikit-Learn</span><span class="tech-tag">Open Meteo API</span>
+                                    <span class="tech-tag">Soil Grids API</span><span class="tech-tag">LLM(Open AI)</span>
                                 </div>
                             </div>
                         </div>
                         <div class="project-card-back">
-                            <h3>Regression.AI</h3>
-                            <p class="project-date">January 2025</p>
-                            <p>A comprehensive regression analysis tool that allows users to upload datasets and automatically applies various regression techniques to find the best model fit.</p>
+                            <h3>Krishi.AI</h3>
+                            <p class="project-date">November 2025</p>
+                            <p>Developed a smart decision-support system that analyzes soil conditions, weather data, and land parameters to generate accurate crop yield predictions and market trend recommendations.</p>
                             <div class="project-tech">
-                                <span class="tech-tag"><a href="https://github.com/AnilKumarK26/Regression.AI" target="_blank" rel="noopener noreferrer">View Project </a></span>
+                                <span class="tech-tag"><a href="https://github.com/AnilKumarK26/AGRO_YieldPrediction_Recommendation" target="_blank" rel="noopener noreferrer">View Project</a></span>
                             </div>
                         </div>
                     </div>
@@ -1643,18 +1505,14 @@ generate accurate crop yield predictions.And provide recommendations by applying
                 <div class="project-card">
                     <div class="project-card-inner">
                         <div class="project-card-front">
-                            <div class="project-img">
-                                <img src="regression.png" alt="Regression.AI">
-                            </div>
+                            <div class="project-img"><img src="regression.png" alt="Regression.AI"></div>
                             <div class="project-info">
                                 <h3>Regression.AI</h3>
                                 <p class="project-date">January 2025</p>
                                 <p>Developed an application which takes up a dataset and perform the regression analysis.</p>
                                 <div class="project-tech">
-                                    <span class="tech-tag">Python</span>
-                                    <span class="tech-tag">Flask</span>
-                                    <span class="tech-tag">HTML/CSS</span>
-                                    <span class="tech-tag">JavaScript</span>
+                                    <span class="tech-tag">Python</span><span class="tech-tag">Flask</span>
+                                    <span class="tech-tag">HTML/CSS</span><span class="tech-tag">JavaScript</span>
                                 </div>
                             </div>
                         </div>
@@ -1663,27 +1521,22 @@ generate accurate crop yield predictions.And provide recommendations by applying
                             <p class="project-date">January 2025</p>
                             <p>A comprehensive regression analysis tool that allows users to upload datasets and automatically applies various regression techniques to find the best model fit.</p>
                             <div class="project-tech">
-                                <span class="tech-tag"><a href="https://github.com/AnilKumarK26/Regression.AI" target="_blank" rel="noopener noreferrer">View Project </a></span>
+                                <span class="tech-tag"><a href="https://github.com/AnilKumarK26/Regression.AI" target="_blank" rel="noopener noreferrer">View Project</a></span>
                             </div>
                         </div>
                     </div>
                 </div>
-                
                 <div class="project-card">
                     <div class="project-card-inner">
                         <div class="project-card-front">
-                            <div class="project-img">
-                                <img src="ods.png" alt="Object Recognition System">
-                            </div>
+                            <div class="project-img"><img src="ods.png" alt="Object Recognition System"></div>
                             <div class="project-info">
                                 <h3>Object Recognition System</h3>
                                 <p class="project-date">November 2024-December 2024</p>
                                 <p>It is an object recognition system, which trains the models on the raw images and provide guidance for the new users.</p>
                                 <div class="project-tech">
-                                    <span class="tech-tag">Python</span>
-                                    <span class="tech-tag">Flask</span>
-                                    <span class="tech-tag">HTML/CSS</span>
-                                    <span class="tech-tag">Computer Vision</span>
+                                    <span class="tech-tag">Python</span><span class="tech-tag">Flask</span>
+                                    <span class="tech-tag">HTML/CSS</span><span class="tech-tag">Computer Vision</span>
                                 </div>
                             </div>
                         </div>
@@ -1697,22 +1550,17 @@ generate accurate crop yield predictions.And provide recommendations by applying
                         </div>
                     </div>
                 </div>
-                
                 <div class="project-card">
                     <div class="project-card-inner">
                         <div class="project-card-front">
-                            <div class="project-img">
-                                <img src="lms.jpg" alt="Learning Management System">
-                            </div>
+                            <div class="project-img"><img src="lms.jpg" alt="Learning Management System"></div>
                             <div class="project-info">
                                 <h3>Learning Management System</h3>
                                 <p class="project-date">November 2024 - Present</p>
                                 <p>Developed a Full-Stack Learning Management System using the MERN stack enabling course management, user authentication, and interactive learning features.</p>
                                 <div class="project-tech">
-                                    <span class="tech-tag">MongoDB</span>
-                                    <span class="tech-tag">Express.js</span>
-                                    <span class="tech-tag">React</span>
-                                    <span class="tech-tag">Node.js</span>
+                                    <span class="tech-tag">MongoDB</span><span class="tech-tag">Express.js</span>
+                                    <span class="tech-tag">React</span><span class="tech-tag">Node.js</span>
                                 </div>
                             </div>
                         </div>
@@ -1720,29 +1568,21 @@ generate accurate crop yield predictions.And provide recommendations by applying
                             <h3>Learning Management System</h3>
                             <p class="project-date">November 2024 - Present</p>
                             <p>A comprehensive platform for online education with features like course creation, student enrollment, progress tracking, and interactive quizzes.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">View Project</span>
-                            </div>
+                            <div class="project-tech"><span class="tech-tag">View Project</span></div>
                         </div>
                     </div>
                 </div>
-                
                 <div class="project-card">
                     <div class="project-card-inner">
                         <div class="project-card-front">
-                            <div class="project-img">
-                                <img src="livenesss.png" alt="Anti Spoof Detection System">
-                            </div>
+                            <div class="project-img"><img src="livenesss.png" alt="Anti Spoof Detection System"></div>
                             <div class="project-info">
                                 <h3>Anti Spoof Detection System</h3>
                                 <p class="project-date">August 2024 - October 2024</p>
                                 <p>Designed a Lightweight Face Anti-Spoofing Model using MobileNetV2, ensuring efficient real-time detection with minimal computational overhead.</p>
                                 <div class="project-tech">
-                                    <span class="tech-tag">Python</span>
-                                    <span class="tech-tag">TensorFlow</span>
-                                    <span class="tech-tag">Flask</span>
-                                    <span class="tech-tag">OpenCV</span>
-                                    <span class="tech-tag">ONNX</span>
+                                    <span class="tech-tag">Python</span><span class="tech-tag">TensorFlow</span>
+                                    <span class="tech-tag">Flask</span><span class="tech-tag">OpenCV</span><span class="tech-tag">ONNX</span>
                                 </div>
                             </div>
                         </div>
@@ -1756,22 +1596,17 @@ generate accurate crop yield predictions.And provide recommendations by applying
                         </div>
                     </div>
                 </div>
-                
                 <div class="project-card">
                     <div class="project-card-inner">
                         <div class="project-card-front">
-                            <div class="project-img">
-                                <img src="ppe.jpg" alt="PPE Detection">
-                            </div>
+                            <div class="project-img"><img src="ppe.jpg" alt="PPE Detection"></div>
                             <div class="project-info">
                                 <h3>PPE Detection</h3>
                                 <p class="project-date">May 2024 - June 2024</p>
                                 <p>Developed a PPE detection system using Python and YOLOv8m, achieving 93% accuracy with a dataset of 1600+ images.</p>
                                 <div class="project-tech">
-                                    <span class="tech-tag">Python</span>
-                                    <span class="tech-tag">Flask</span>
-                                    <span class="tech-tag">HTML/CSS</span>
-                                    <span class="tech-tag">JavaScript</span>
+                                    <span class="tech-tag">Python</span><span class="tech-tag">Flask</span>
+                                    <span class="tech-tag">HTML/CSS</span><span class="tech-tag">JavaScript</span>
                                 </div>
                             </div>
                         </div>
@@ -1821,26 +1656,11 @@ generate accurate crop yield predictions.And provide recommendations by applying
         <div class="container">
             <h2 class="section-title">Certifications</h2>
             <div class="cert-grid">
-                <div class="cert-card">
-                    <h3>Deep Learning</h3>
-                    <p>Kaggle - January 2025</p>
-                </div>
-                <div class="cert-card">
-                    <h3>Artificial Intelligence Certification</h3>
-                    <p>Infosys Springboard - September 2024</p>
-                </div>
-                <div class="cert-card">
-                    <h3>Machine Learning Certification</h3>
-                    <p>IBM, edX - October 2024</p>
-                </div>
-                <div class="cert-card">
-                    <h3>Python Certification</h3>
-                    <p>Hackerrank - August 2024</p>
-                </div>
-                <div class="cert-card">
-                    <h3>Accenture Data Analyst Job Simulation</h3>
-                    <p>Forage - March 2024</p>
-                </div>
+                <div class="cert-card"><h3>Deep Learning</h3><p>Kaggle - January 2025</p></div>
+                <div class="cert-card"><h3>Artificial Intelligence Certification</h3><p>Infosys Springboard - September 2024</p></div>
+                <div class="cert-card"><h3>Machine Learning Certification</h3><p>IBM, edX - October 2024</p></div>
+                <div class="cert-card"><h3>Python Certification</h3><p>Hackerrank - August 2024</p></div>
+                <div class="cert-card"><h3>Accenture Data Analyst Job Simulation</h3><p>Forage - March 2024</p></div>
             </div>
         </div>
     </section>
@@ -1850,17 +1670,28 @@ generate accurate crop yield predictions.And provide recommendations by applying
         <div class="container">
             <h2 class="section-title">Professional Memberships</h2>
             <div class="cert-grid">
-                <div class="cert-card">
-                    <h3>AI Club</h3>
-                    <p>President</p>
+                <div class="cert-card"><h3>AI Club</h3><p>President</p></div>
+                <div class="cert-card"><h3>Rotary Club (RACGVP)</h3><p>Active Member</p></div>
+                <div class="cert-card"><h3>Computer Society of India</h3><p>Member</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume-section">
+        <div class="container">
+            <h2 class="section-title">Resume</h2>
+            <div class="resume-wrapper">
+                <div class="resume-actions">
+                    <a href="Anil_Kumar_Kedarsetty.pdf" download class="btn" style="display:inline-flex;align-items:center;gap:10px;">
+                        <i class="fas fa-download"></i> Download Resume
+                    </a>
+                    <button class="btn-outline" id="toggleResumeBtn" onclick="toggleResume()">
+                        <i class="fas fa-eye"></i> View Resume
+                    </button>
                 </div>
-                <div class="cert-card">
-                    <h3>Rotary Club (RACGVP)</h3>
-                    <p>Active Member</p>
-                </div>
-                <div class="cert-card">
-                    <h3>Computer Society of India</h3>
-                    <p>Member</p>
+                <div class="resume-viewer-wrap" id="resumeViewer">
+                    <iframe src="Anil_Kumar_Kedarsetty.pdf" title="Anil Kumar Kedarsetty Resume"></iframe>
                 </div>
             </div>
         </div>
@@ -1872,35 +1703,26 @@ generate accurate crop yield predictions.And provide recommendations by applying
             <h2 class="section-title">Get In Touch</h2>
             <div class="contact-info">
                 <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
+                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
                     <h3>Email</h3>
                     <p><a href="mailto:anilkumarkedarsetty@gmail.com">anilkumarkedarsetty@gmail.com</a></p>
                 </div>
                 <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fas fa-phone"></i>
-                    </div>
+                    <div class="contact-icon"><i class="fas fa-phone"></i></div>
                     <h3>Phone</h3>
                     <p>+91 9885593971</p>
                 </div>
                 <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fab fa-linkedin"></i>
-                    </div>
+                    <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
                     <h3>LinkedIn</h3>
                     <p><a href="https://www.linkedin.com/in/anil-kumar-kedarsetty/" target="_blank">anil-kumar-kedarsetty</a></p>
                 </div>
                 <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fab fa-github"></i>
-                    </div>
+                    <div class="contact-icon"><i class="fab fa-github"></i></div>
                     <h3>GitHub</h3>
                     <p><a href="https://github.com/AnilKumarK26" target="_blank">AnilKumarK26</a></p>
                 </div>
             </div>
-            
             <div class="contact-form">
                 <form id="contactForm">
                     <div class="form-group">
@@ -1943,13 +1765,11 @@ generate accurate crop yield predictions.And provide recommendations by applying
         const body = document.body;
         let darkMode = localStorage.getItem('darkMode');
         
-        // Check for saved user preference
         if (darkMode === 'enabled') {
             body.setAttribute('data-theme', 'dark');
             themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
         }
         
-        // Toggle theme on button click
         themeToggle.addEventListener('click', () => {
             if (body.getAttribute('data-theme') === 'dark') {
                 body.removeAttribute('data-theme');
@@ -1962,53 +1782,38 @@ generate accurate crop yield predictions.And provide recommendations by applying
             }
         });
         
-        // Smooth scrolling for anchor links
+        // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                
+                const targetElement = document.querySelector(this.getAttribute('href'));
                 if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
+                    window.scrollTo({ top: targetElement.offsetTop - 80, behavior: 'smooth' });
                 }
             });
         });
         
-        // Form submission
+        // Contact form
         const contactForm = document.getElementById('contactForm');
         if (contactForm) {
             contactForm.addEventListener('submit', function(e) {
                 e.preventDefault();
-                
-                // Get form values
                 const name = document.getElementById('name').value;
                 const email = document.getElementById('email').value;
                 const subject = document.getElementById('subject').value;
                 const message = document.getElementById('message').value;
-                
-                // Here you would typically send the form data to a server
-                // For demonstration, we'll just log it and show an alert
                 console.log({ name, email, subject, message });
                 alert('Thank you for your message! I will get back to you soon.');
-                
-                // Reset the form
                 contactForm.reset();
             });
         }
         
-        // Add animation to elements when they come into view
+        // Scroll animations
         const animateOnScroll = () => {
             const elements = document.querySelectorAll('.timeline-item, .project-card, .education-card, .cert-card, .contact-item');
-            
             elements.forEach(element => {
                 const elementPosition = element.getBoundingClientRect().top;
                 const screenPosition = window.innerHeight / 1.3;
-                
                 if (elementPosition < screenPosition) {
                     element.style.opacity = '1';
                     element.style.transform = 'translateY(0)';
@@ -2016,186 +1821,147 @@ generate accurate crop yield predictions.And provide recommendations by applying
             });
         };
         
-        // Set initial state for animated elements
         document.querySelectorAll('.timeline-item, .project-card, .education-card, .cert-card, .contact-item').forEach(element => {
             element.style.opacity = '0';
             element.style.transform = 'translateY(20px)';
             element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         });
         
-        // Run animation check on scroll and load
         window.addEventListener('scroll', animateOnScroll);
         window.addEventListener('load', animateOnScroll);
 
-        // Add this script to your existing JavaScript or include it in a new script tag
-
-// Function to add 3D video elements to project cards
-// Function to add 3D video elements to project cards
-function enhance3DVideoEffects() {
-    // Get all project cards
-    const projectCards = document.querySelectorAll('.project-card');
-    
-    // Add play indicator to each card
-    projectCards.forEach(card => {
-        // Create play button indicator
-        const playIndicator = document.createElement('div');
-        playIndicator.className = 'play-indicator';
-        card.querySelector('.project-card-front').appendChild(playIndicator);
-        
-        // Add 3D hover effect
-        card.addEventListener('mousemove', function(e) {
-            // Get position of mouse relative to card
-            const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left; // X position within the card
-            const y = e.clientY - rect.top;  // Y position within the card
-            
-            // Calculate rotation based on mouse position
-            const centerX = rect.width / 2;
-            const centerY = rect.height / 2;
-            
-            // Calculate rotation angle (limited to small range for subtle effect)
-            const rotateY = ((x - centerX) / centerX) * 10; // Max 10 degrees
-            const rotateX = ((centerY - y) / centerY) * 10; // Max 10 degrees
-            
-            // Apply rotation to card inner
-            const cardInner = card.querySelector('.project-card-inner');
-            cardInner.style.transform = `rotateY(${rotateY}deg) rotateX(${rotateX}deg) translateZ(10px)`;
-            
-            // Reset when flipped
-            if (card.classList.contains('flipped')) {
-                cardInner.style.transform = 'rotateY(180deg)';
-            }
-        });
-        
-        // Reset on mouse leave
-        card.addEventListener('mouseleave', function() {
-            const cardInner = card.querySelector('.project-card-inner');
-            cardInner.style.transform = '';
-        });
-        
-        // Toggle flip on click
-        card.addEventListener('click', function() {
-            const cardInner = card.querySelector('.project-card-inner');
-            if (card.classList.contains('flipped')) {
-                cardInner.style.transform = '';
-                card.classList.remove('flipped');
+        // Resume toggle
+        function toggleResume() {
+            var viewer = document.getElementById('resumeViewer');
+            var btn = document.getElementById('toggleResumeBtn');
+            if (viewer.style.display === 'none' || viewer.style.display === '') {
+                viewer.style.display = 'block';
+                btn.innerHTML = '<i class="fas fa-eye-slash"></i> Hide Resume';
+                setTimeout(function(){ viewer.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 100);
             } else {
-                cardInner.style.transform = 'rotateY(180deg)';
-                card.classList.add('flipped');
+                viewer.style.display = 'none';
+                btn.innerHTML = '<i class="fas fa-eye"></i> View Resume';
             }
-        });
-        
-        // Add depth effect to image on hover
-        const img = card.querySelector('.project-img img');
-        card.addEventListener('mouseenter', function() {
-            img.style.transform = 'scale(1.1) translateZ(20px)';
-        });
-        
-        card.addEventListener('mouseleave', function() {
-            img.style.transform = '';
-        });
-    });
-}
-
-// Initialize the 3D effects when DOM is fully loaded
-document.addEventListener('DOMContentLoaded', function() {
-    enhance3DVideoEffects();
-    
-    // Additional animation for project cards
-    const projectCards = document.querySelectorAll('.project-card');
-    projectCards.forEach((card, index) => {
-        setTimeout(() => {
-            card.classList.add('fade-in-up');
-        }, index * 150); // Stagger the animations
-    });
-});
-
-
-// Enhanced 3D effect for the hero section
-function enhanceHero3DEffect() {
-    const heroSection = document.querySelector('.hero');
-    const heroContent = document.querySelector('.hero-content');
-    
-    // Parallax effect on mouse move
-    heroSection.addEventListener('mousemove', function(e) {
-        const rect = heroSection.getBoundingClientRect();
-        const mouseX = e.clientX - rect.left; 
-        const mouseY = e.clientY - rect.top;
-        
-        // Calculate movement percentage
-        const moveX = (mouseX / rect.width - 0.5) * 20;
-        const moveY = (mouseY / rect.height - 0.5) * 20;
-        
-        // Apply transformation to hero content
-        heroContent.style.transform = `translateZ(30px) rotateX(${-moveY}deg) rotateY(${moveX}deg)`;
-        
-        // Move zigzag elements with mouse for enhanced depth effect
-        const zigzags = document.querySelectorAll('.zigzag-line');
-        zigzags.forEach((zigzag, index) => {
-            const depth = (index + 1) * 5;
-            const moveFactorX = moveX * (0.3 + index * 0.1);
-            const moveFactorY = moveY * (0.3 + index * 0.1);
-            zigzag.style.transform = `rotate(${index % 2 === 0 ? -2 : 3}deg) 
-                                      skewX(${index % 2 === 0 ? -15 : 20}deg) 
-                                      translate(${moveFactorX}px, ${moveFactorY}px)`;
-        });
-    });
-    
-    // Reset on mouse leave
-    heroSection.addEventListener('mouseleave', function() {
-        heroContent.style.transform = `translateZ(0)`;
-        
-        const zigzags = document.querySelectorAll('.zigzag-line');
-        zigzags.forEach((zigzag, index) => {
-            zigzag.style.transform = `rotate(${index % 2 === 0 ? -2 : 3}deg) 
-                                      skewX(${index % 2 === 0 ? -15 : 20}deg)`;
-        });
-    });
-    
-    // Add parallax scroll effect
-    window.addEventListener('scroll', function() {
-        const scrollPosition = window.scrollY;
-        if (scrollPosition < 600) { // Only apply effect when hero is visible
-            const translateY = scrollPosition * 0.3;
-            heroContent.style.transform = `translateZ(0) translateY(${translateY}px)`;
         }
-    });
-}
 
-// Initialize the hero 3D effect when DOM is loaded
-document.addEventListener('DOMContentLoaded', function() {
-    enhanceHero3DEffect();
-    
-    // Generate additional random zigzag elements for more depth
-    const addRandomZigzags = () => {
-        const zigzagDecorator = document.querySelector('.zigzag-decorator');
-        
-        for (let i = 0; i < 5; i++) {
-            const zigzag = document.createElement('div');
-            zigzag.className = `zigzag-line zigzag-extra-${i}`;
-            
-            // Random positioning and styling
-            const width = 30 + Math.random() * 40; // 30% to 70% width
-            const top = Math.random() * 80; // 0% to 80% from top
-            const left = Math.random() * 70; // 0% to 70% from left
-            const opacity = 0.05 + Math.random() * 0.05; // 0.05 to 0.1 opacity
-            const rotateAngle = (Math.random() - 0.5) * 5; // -2.5 to 2.5 degrees
-            const skewAngle = (Math.random() - 0.5) * 30; // -15 to 15 degrees
-            
-            zigzag.style.width = `${width}%`;
-            zigzag.style.top = `${top}%`;
-            zigzag.style.left = `${left}%`;
-            zigzag.style.opacity = opacity;
-            zigzag.style.transform = `rotate(${rotateAngle}deg) skewX(${skewAngle}deg)`;
-            zigzag.style.animationDuration = `${15 + i * 2}s`; // Staggered animation duration
-            
-            zigzagDecorator.appendChild(zigzag);
+        // 3D video effects for project cards
+        function enhance3DVideoEffects() {
+            const projectCards = document.querySelectorAll('.project-card');
+            projectCards.forEach(card => {
+                const playIndicator = document.createElement('div');
+                playIndicator.className = 'play-indicator';
+                card.querySelector('.project-card-front').appendChild(playIndicator);
+                
+                card.addEventListener('mousemove', function(e) {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
+                    const rotateY = ((x - centerX) / centerX) * 10;
+                    const rotateX = ((centerY - y) / centerY) * 10;
+                    const cardInner = card.querySelector('.project-card-inner');
+                    cardInner.style.transform = `rotateY(${rotateY}deg) rotateX(${rotateX}deg) translateZ(10px)`;
+                    if (card.classList.contains('flipped')) {
+                        cardInner.style.transform = 'rotateY(180deg)';
+                    }
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    const cardInner = card.querySelector('.project-card-inner');
+                    cardInner.style.transform = '';
+                });
+                
+                card.addEventListener('click', function() {
+                    const cardInner = card.querySelector('.project-card-inner');
+                    if (card.classList.contains('flipped')) {
+                        cardInner.style.transform = '';
+                        card.classList.remove('flipped');
+                    } else {
+                        cardInner.style.transform = 'rotateY(180deg)';
+                        card.classList.add('flipped');
+                    }
+                });
+                
+                const img = card.querySelector('.project-img img');
+                card.addEventListener('mouseenter', function() {
+                    img.style.transform = 'scale(1.1) translateZ(20px)';
+                });
+                card.addEventListener('mouseleave', function() {
+                    img.style.transform = '';
+                });
+            });
         }
-    };
-    
-    addRandomZigzags();
-});
+
+        document.addEventListener('DOMContentLoaded', function() {
+            enhance3DVideoEffects();
+            const projectCards = document.querySelectorAll('.project-card');
+            projectCards.forEach((card, index) => {
+                setTimeout(() => { card.classList.add('fade-in-up'); }, index * 150);
+            });
+        });
+
+        // Hero 3D effect
+        function enhanceHero3DEffect() {
+            const heroSection = document.querySelector('.hero');
+            const heroContent = document.querySelector('.hero-content');
+            
+            heroSection.addEventListener('mousemove', function(e) {
+                const rect = heroSection.getBoundingClientRect();
+                const mouseX = e.clientX - rect.left;
+                const mouseY = e.clientY - rect.top;
+                const moveX = (mouseX / rect.width - 0.5) * 20;
+                const moveY = (mouseY / rect.height - 0.5) * 20;
+                heroContent.style.transform = `translateZ(30px) rotateX(${-moveY}deg) rotateY(${moveX}deg)`;
+                const zigzags = document.querySelectorAll('.zigzag-line');
+                zigzags.forEach((zigzag, index) => {
+                    const moveFactorX = moveX * (0.3 + index * 0.1);
+                    const moveFactorY = moveY * (0.3 + index * 0.1);
+                    zigzag.style.transform = `rotate(${index % 2 === 0 ? -2 : 3}deg) skewX(${index % 2 === 0 ? -15 : 20}deg) translate(${moveFactorX}px, ${moveFactorY}px)`;
+                });
+            });
+            
+            heroSection.addEventListener('mouseleave', function() {
+                heroContent.style.transform = `translateZ(0)`;
+                const zigzags = document.querySelectorAll('.zigzag-line');
+                zigzags.forEach((zigzag, index) => {
+                    zigzag.style.transform = `rotate(${index % 2 === 0 ? -2 : 3}deg) skewX(${index % 2 === 0 ? -15 : 20}deg)`;
+                });
+            });
+            
+            window.addEventListener('scroll', function() {
+                const scrollPosition = window.scrollY;
+                if (scrollPosition < 600) {
+                    const translateY = scrollPosition * 0.3;
+                    heroContent.style.transform = `translateZ(0) translateY(${translateY}px)`;
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            enhanceHero3DEffect();
+            const addRandomZigzags = () => {
+                const zigzagDecorator = document.querySelector('.zigzag-decorator');
+                for (let i = 0; i < 5; i++) {
+                    const zigzag = document.createElement('div');
+                    zigzag.className = `zigzag-line zigzag-extra-${i}`;
+                    const width = 30 + Math.random() * 40;
+                    const top = Math.random() * 80;
+                    const left = Math.random() * 70;
+                    const opacity = 0.05 + Math.random() * 0.05;
+                    const rotateAngle = (Math.random() - 0.5) * 5;
+                    const skewAngle = (Math.random() - 0.5) * 30;
+                    zigzag.style.width = `${width}%`;
+                    zigzag.style.top = `${top}%`;
+                    zigzag.style.left = `${left}%`;
+                    zigzag.style.opacity = opacity;
+                    zigzag.style.transform = `rotate(${rotateAngle}deg) skewX(${skewAngle}deg)`;
+                    zigzag.style.animationDuration = `${15 + i * 2}s`;
+                    zigzagDecorator.appendChild(zigzag);
+                }
+            };
+            addRandomZigzags();
+        });
     </script>
 </body>
 </html>
-
